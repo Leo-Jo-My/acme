@@ -1,0 +1,4 @@
+config baidupcs 'config'
+	option port '5299'
+	option path '/mnt/sda1'
+	option enabled '0'
