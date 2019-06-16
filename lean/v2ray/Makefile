@@ -99,8 +99,8 @@ define Build/Configure
 endef
 
 define Build/Compile
-		chmod +x $(PKG_BUILD_DIR)/$(V2RAY_BIN) && upx --ultra-brute $(PKG_BUILD_DIR)/$(V2RAY_BIN)
-		chmod +x $(PKG_BUILD_DIR)/$(V2CTL_BIN) && upx --ultra-brute $(PKG_BUILD_DIR)/$(V2CTL_BIN)
+		chmod +755 $(PKG_BUILD_DIR)/$(V2RAY_BIN) && upx --lzma $(PKG_BUILD_DIR)/$(V2RAY_BIN)
+		chmod +755 $(PKG_BUILD_DIR)/$(V2CTL_BIN) && upx --lzma $(PKG_BUILD_DIR)/$(V2CTL_BIN)
 		echo "$(PKG_VERSION)" > $(PKG_BUILD_DIR)/v2ray_version
 endef
 
