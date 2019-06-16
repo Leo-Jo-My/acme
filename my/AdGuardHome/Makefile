@@ -52,7 +52,7 @@ define Build/Configure
 endef
 
 define Build/Compile
-	chmod +x $(PKG_BUILD_DIR)/AdGuardHome/AdGuardHome && upx --ultra-brute $(PKG_BUILD_DIR)/AdGuardHome/AdGuardHome
+	chmod +x $(PKG_BUILD_DIR)/AdGuardHome/AdGuardHome && upx --lzma $(PKG_BUILD_DIR)/AdGuardHome/AdGuardHome
 endef
 
 define Package/$(PKG_NAME)/install
