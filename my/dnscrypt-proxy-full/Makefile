@@ -41,6 +41,10 @@ ifeq ($(ARCH),mips)
 	PKG_ARCH_DNSCRYPT:=linux_mips64
 	PKG_BUILD_DNSCRYPT:=linux-mips64
 endif
+ifeq ($(ARCH),ar71xx)
+	PKG_ARCH_DNSCRYPT:=linux_mips
+	PKG_BUILD_DNSCRYPT:=linux-mips
+endif
 ifeq ($(ARCH),arm)
 	PKG_ARCH_DNSCRYPT:=linux_armv6
 	PKG_BUILD_DNSCRYPT:=linux-armv6
