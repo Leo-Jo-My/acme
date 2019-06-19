@@ -34,10 +34,6 @@ ifeq ($(ARCH),mipsel)
 	PKG_ARCH_CLASH:=linux-mipsle
 endif
 ifeq ($(ARCH),mips)
-	PKG_ARCH_CLASH:=linux-mips64
-endif
-endif
-ifeq ($(ARCH),ar71xx)
 	PKG_ARCH_CLASH:=linux-mips-hardfloat
 endif
 ifeq ($(ARCH),arm)
