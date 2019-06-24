@@ -527,9 +527,6 @@ msgstr "4 线程"
 msgid "8 Threads"
 msgstr "8 线程"
 
-msgid "Dnsmasq rejects IPv6 parsing and optimizes domestic complex dual-stack network"
-msgstr "dnsmasq不返回ipv6解析结果,优化国内复杂双栈网络"
-
 msgid "Kill BT"
 msgstr "禁止BT"
 

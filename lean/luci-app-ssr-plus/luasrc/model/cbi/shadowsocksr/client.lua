@@ -95,11 +95,6 @@ o:depends("pdnsd_enable", "2")
 o:depends("pdnsd_enable", "3")
 o:depends("pdnsd_enable", "4")
 
-aaaa = s:option(Flag, "filter_aaaa", translate("Filter AAAA"))
-aaaa.default = 0
-aaaa.rmempty = false
-aaaa.description = translate("Dnsmasq rejects IPv6 parsing and optimizes domestic complex dual-stack network")
-
 o = s:option(Flag, "bt", translate("Kill BT"))
 o.default = 0
 o.rmempty = false

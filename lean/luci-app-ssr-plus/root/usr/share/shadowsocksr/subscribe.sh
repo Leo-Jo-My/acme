@@ -52,6 +52,11 @@ Server_Update() {
 	${uci_set}vmess_id="$ssr_vmess_id"
 	${uci_set}security="$ssr_security"
 	${uci_set}transport="$ssr_transport"
+	${uci_set}ws_host="$ssr_ws_host"
+	${uci_set}ws_path="$ssr_ws_path"
+	if [ "$ssr_tls" = "tls" ];then
+	${uci_set}tls="1"
+	fi
 	${uci_set}tcp_guise="$ssr_tcp_guise"
 }
 
@@ -157,13 +162,16 @@ do
 				temp_info=$(urlsafe_b64decode ${ssr_url[temp_x]//vmess:\/\//}) # 解码 Vmess 链接
 				ssr_type="v2ray"
 				json_load "$temp_info"
+				json_get_var ssr_remarks ps
 				json_get_var ssr_host add
 				json_get_var ssr_port port
 				json_get_var ssr_alter_id aid
 				json_get_var ssr_vmess_id id
 				json_get_var ssr_security type
 				json_get_var ssr_transport net
-				json_get_var ssr_remarks ps
+				json_get_var ssr_ws_host host
+				json_get_var ssr_ws_path path
+				json_get_var ssr_tls tls
 				ssr_tcp_guise="none"
 			fi
 
