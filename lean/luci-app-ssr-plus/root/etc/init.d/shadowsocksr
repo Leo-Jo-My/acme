@@ -331,7 +331,7 @@ start_dnsforwarder()
 	local usr_dns="$1"
 	local usr_port="$2"
 
-	local tcp_dns_list="1.0.0.1,1.1.1.1"
+	local tcp_dns_list="1.0.0.1,208.67.220.220"
 	[ -z "$usr_dns" ] && usr_dns="8.8.8.8"
 	[ -z "$usr_port" ] && usr_port="53"
 	
@@ -396,7 +396,7 @@ EOF
 }
 
 dnscrypt_config_file() {
-
+	local dnsstr="$(uci_get_by_type global tunnel_forward 8.8.4.4:53)"
 	kill $(pidof pdnsd) >/dev/null 2>&1 || killall -9 pdnsd >/dev/null 2>&1
 	kill $(pidof dnsparsing) >/dev/null 2>&1 || killall -9 dnsparsing >/dev/null 2>&1
 	/etc/init.d/dnscrypt-proxy disable
@@ -434,7 +434,7 @@ cache_min_ttl = 60000
 cache_max_ttl = 864000
 cache_neg_ttl = 60
 
-fallback_resolver = '9.9.9.9:53'
+fallback_resolver = '$dnsstr'
 
 [query_log]
 format = "ltsv"
