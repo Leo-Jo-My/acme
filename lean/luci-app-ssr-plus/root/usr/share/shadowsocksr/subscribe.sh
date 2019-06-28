@@ -43,6 +43,7 @@ Server_Update() {
 	${uci_set}obfs="$ssr_obfs"
 	${uci_set}obfs_param="$ssr_obfsparam"
 	${uci_set}fast_open="0"
+	${uci_set}weight="10"
 	${uci_set}kcp_enable="0"
 	${uci_set}kcp_port="0"
 	${uci_set}kcp_param="--nocomp"

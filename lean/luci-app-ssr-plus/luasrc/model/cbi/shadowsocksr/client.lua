@@ -101,7 +101,7 @@ o.rmempty = false
 o.description = translate("Prohibit downloading tool ports through proxy")
 
 o = s:option(Value, "bt_port", translate("BT Port"))
-o.default = "51413,8437,12551"
+o.default = "1236:65535"
 o.rmempty = true
 o:depends("bt", "1")
 

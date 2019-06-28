@@ -110,6 +110,6 @@ end
 o = s:option(DummyValue,"server",translate("Ping Latency"))
 o.template="shadowsocksr/ping"
 
-m:append(Template("passwall/server_list/server_list"))
+m:append(Template("shadowsocksr/server_list"))
 
 return m
